@@ -8,6 +8,7 @@
     "setup": "node ./lib/setup.mjs"
   },
   "dependencies": {
+    "@nextui-org/react": "1.0.0-beta.12",
     "@octokit/rest": "^19.0.7",
     "@planetscale/database": "^1.5.0",
     "@vercel/analytics": "^0.1.11",

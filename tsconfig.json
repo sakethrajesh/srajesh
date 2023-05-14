@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "app/projects/page.js"  ],
   "exclude": ["node_modules"]
 }
