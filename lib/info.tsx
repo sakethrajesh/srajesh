@@ -5,14 +5,14 @@ export const avatar = me;
 export const about = () => {
   return (
     <>
-      I'm a software engineer who loves to explore new technology. I am currenlty a Machine Learning Enineering Intern at Octo (IBM).
+      I'm a software engineer who loves to explore new technologies. I am currenlty a Machine Learning Engineering Intern at Octo (IBM).
     </>
   );
 };
 export const bio = () => {
   return (
     <>
-      When I'm not coding, I'm probably hooping or sparring. I also love to travel and explore new places.
+      When I'm not coding, I'm probably hooping or out on a hike. I also love photography and exploring new places.
     </>
   );
 };

@@ -48,7 +48,7 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://docs.google.com/document/d/1HDfqBC8327icTNnRf16gS33gScvwmuHXN-uvYVdwuLA/edit?usp=sharing"
           >
             <ArrowIcon />
             <p className="h-7">My Resume</p>
@@ -57,9 +57,10 @@ export default async function HomePage() {
         <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-            rel="noopener noreferrer"
+            // rel="noopener noreferrer"
             // target="_blank"
             href="mailto:saketh@vt.edu"
+            // onClick={() => window.location = 'mailto:saketh@vt.edu'}
           >
             <ArrowIcon />
             <p className="h-7">Email Me!</p>
