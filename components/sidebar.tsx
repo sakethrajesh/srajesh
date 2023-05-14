@@ -22,7 +22,7 @@ const navItems = {
 
 function Logo() {
   return (
-    <Link aria-label="Lee Robinson" href="/">
+    <Link aria-label="Saketh Rajesh" href="/">
       <text className='text-4xl font-serif mb-1'>
         SR
       </text>
