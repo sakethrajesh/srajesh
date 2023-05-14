@@ -1,10 +1,10 @@
 import { ArrowIcon } from 'components/icons';
 import Link from 'next/link';
 
-export const Metadata = {
-  title: 'Projects',
-  description: 'Check out some of my recent projcts!',
-};
+// export const Metadata = {
+//   title: 'Projects',
+//   description: 'Check out some of my recent projcts!',
+// };
 
 const projects = {
   'The Narator': {
