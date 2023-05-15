@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   description: 'Developer, writer, and creator.',
   openGraph: {
     title: 'Saketh Rajesh',
-    description: 'Developer, writer, and creator.',
-    url: 'https://leerob.io',
+    description: 'Developer, hooper, and creator.',
+    url: 'https://srajesh.vercel.app',
     siteName: 'Saketh Rajesh',
     images: [
       {
