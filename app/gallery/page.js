@@ -1,7 +1,7 @@
 import { ArrowIcon } from 'components/icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import one from '../images/1.jpg'
+import one from '../images/4.jpg'
 import two from '../images/2.jpg'
 import three from '../images/3.jpg'
 
