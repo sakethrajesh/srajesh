@@ -15,6 +15,9 @@ const navItems = {
   '/projects': {
     name: 'projects',
   },
+  '/gallery': {
+    name: 'gallery'
+  }
   // '/guestbook': {
   //   name: 'guestbook',
   // },
@@ -39,7 +42,7 @@ export default function Navbar() {
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
       <div className="lg:sticky lg:top-20">
-        <div className="ml-5 md:ml-[10px] md:px-0 md:mb-2 md:mt-1 space-y-10 flex flex-col md:flex-row items-start ">
+        <div className="ml-5 md:ml-[10px] md:px-0 md:mb-2 space-y-10 flex flex-col md:flex-row items-start ">
           <Logo />
         </div>
         <LayoutGroup>
