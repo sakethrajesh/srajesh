@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import one from '../images/4.jpg'
 import two from '../images/2.jpg'
-import three from '../images/3.jpg'
+import three from '../images/5.jpg'
 
 const images = {
   'The Narato': {
