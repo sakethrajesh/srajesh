@@ -8,9 +8,14 @@
     "setup": "node ./lib/setup.mjs"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "@nextui-org/react": "1.0.0-beta.12",
     "@octokit/rest": "^19.0.7",
     "@planetscale/database": "^1.5.0",
+    "@supabase/auth-helpers-nextjs": "^0.6.1",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/gotrue-js": "^2.27.0",
+    "@supabase/supabase-js": "^2.22.0",
     "@vercel/analytics": "^0.1.11",
     "@vercel/edge-config": "^0.1.1",
     "@vercel/og": "^0.0.27",
