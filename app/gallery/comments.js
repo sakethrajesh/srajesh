@@ -11,6 +11,7 @@ export default function comments({title, id}) {
     const [comments, setComments] = useState([]);
     const cancelButtonRef = useRef(null)
     const [session, setSession] = useState(null)
+    const [ready, setReady] = useState(false)
 
     useEffect(() => {
         setSession(supabase.auth.getSession())
@@ -25,8 +26,25 @@ export default function comments({title, id}) {
             setComments(data[0]["comments"])
         }
         getComments()
-
+        setReady(true)
+        
     }, [])
+    
+    useEffect(() => {
+        console.log(comments)
+
+        const send = async () => {
+            const { data, error } = await supabase
+            .from('gallery')
+            .update({ comments: comments })
+            .eq('id', id+1)
+
+        }
+        
+        if(ready === true) {
+            send()
+        }
+    }, [comments])
 
   function closeModal() {
     setIsOpen(false)
@@ -38,20 +56,17 @@ export default function comments({title, id}) {
 
   const submit = async (content) => {
     // e.preventDefault();
-    await setComments((comments) => [
+    setComments((comments) => [
         ...comments,
         {
             name: session.user.email,
             content: content
         },
-      ])
+    ])
+    
+      
 
-    const { data, error } = await supabase
-    .from('gallery')
-    .update({ comments: comments })
-    .eq('id', id+1)
 
-    console.log('commented!')
   }
 
   return (
