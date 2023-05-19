@@ -30,7 +30,7 @@ export default async function HomePage() {
         <p className="mr-5 my-5 text-neutral-800 dark:text-neutral-200">
           {about()}
         </p>
-      <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
+      <div className="flex items-start items-center my-8 flex-row">
         <Image
           alt={name}
           className="rounded mr-5"
@@ -42,7 +42,30 @@ export default async function HomePage() {
         
       <div>
 
-      <ul className="flex flex-col space-x-0 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
+      <div className="flex flex-row space-x-0 space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
+        <div className="flex items-center flex-col">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/saketh-rajesh"
+          >
+            <TwitterIcon />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/sakethrajesh"
+          >
+            <GitHubIcon />
+          </a>
+        </div>
+      </div>
+      </div>
+      </div>
+      <p className=" text-neutral-800 dark:text-neutral-200">
+        {bio()}
+      </p>
+      <ul className="flex flex-col space-x-0 space-y-2 mt-3 font-sm text-neutral-500 dark:text-neutral-400">
         <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
@@ -54,7 +77,7 @@ export default async function HomePage() {
             <p className="h-7">My Resume</p>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             // rel="noopener noreferrer"
@@ -65,31 +88,8 @@ export default async function HomePage() {
             <ArrowIcon />
             <p className="h-7">Email Me!</p>
           </a>
-        </li>
-      </ul>
-      </div>
-      </div>
-      <p className=" text-neutral-800 dark:text-neutral-200">
-        {bio()}
-      </p>
-      <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/saketh-rajesh"
-            className="flex items-center gap-2"
-          >
-            <TwitterIcon />
-          </a>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/sakethrajesh"
-            className="flex items-center gap-2"
-          >
-            <GitHubIcon />
-          </a>
-        </div>
+        </li> */}
+        </ul>
     </section>
   );
 }
