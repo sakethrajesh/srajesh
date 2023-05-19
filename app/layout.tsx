@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Saketh Rajesh',
     images: [
       {
-        url: 'https://leerob.io/og.jpg',
+        url: './SR logo.png',
         width: 1920,
         height: 1080,
       },
