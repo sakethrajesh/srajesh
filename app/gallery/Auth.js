@@ -34,7 +34,7 @@ export default function Auth({}) {
           <button
                 onClick={() => handleOAuthLogin('google')}
                 type="button"
-                className="flex items-center justify-center w-1/4 p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
+                className="flex items-center justify-center py-2 px-5 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
               >
                   <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +49,9 @@ export default function Auth({}) {
               <button
                 onClick={() => signout()}
                 type="button"
-                className="flex items-center justify-center w-1/4 p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
+                className="flex items-center justify-center py-2 px-5 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
               >
-                <p className="text-xs font-serif ml-2">sign out</p>
+                <p className="text-xs font-serif">sign out</p>
               </button>
         )
       }

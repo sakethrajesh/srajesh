@@ -78,7 +78,7 @@ export default function comments({title, id}) {
                     <button
                     type="button"
                     onClick={openModal}
-                    className="rounded bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                    className="w-full rounded bg-black bg-opacity-20 px-4 py-2 text-sm  font-serif text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
                     Open Comments
                     </button>
@@ -148,7 +148,7 @@ export default function comments({title, id}) {
                     <button
                     type="button"
                     onClick={() => {}}
-                    className="rounded bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                    className="w-full rounded bg-black bg-opacity-20 px-4 py-2 text-sm font-serif text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
                     Sign in to View Comments
                     </button>
