@@ -40,7 +40,7 @@ export default function comments({title, id}) {
             .eq('id', id+1)
 
         }
-        
+
         if(ready === true) {
             send()
         }
@@ -78,7 +78,7 @@ export default function comments({title, id}) {
                     <button
                     type="button"
                     onClick={openModal}
-                    className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                    className="rounded bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
                     Open Comments
                     </button>
@@ -109,7 +109,7 @@ export default function comments({title, id}) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded bg-gray-200 p-6 text-left align-middle shadow-xl transition-all">
                             <Dialog.Title
                                 as="h3"
                                 className="text-lg font-medium leading-6 text-gray-900"
@@ -135,17 +135,7 @@ export default function comments({title, id}) {
                                     )
                                 }
                                 <Form onSubmit={submit}/>
-            
-            
-                            <div className="mt-4">
-                                {/* <button
-                                type="button"
-                                className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                                onClick={submit}
-                                >
-                                test comment
-                                </button> */}
-                            </div>
+
                             </Dialog.Panel>
                         </Transition.Child>
                         </div>
@@ -158,7 +148,7 @@ export default function comments({title, id}) {
                     <button
                     type="button"
                     onClick={() => {}}
-                    className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                    className="rounded bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
                     >
                     Sign in to View Comments
                     </button>
