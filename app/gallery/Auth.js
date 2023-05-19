@@ -21,7 +21,7 @@ export default function Auth({}) {
   async function handleOAuthLogin(provider) {    
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider: provider,
-        redirectTo: 'https://srajesh.vercel.app/gallery'
+        redirectTo: '/gallery'
     })
   
     if (error) console.log('Error: ', error.message)
