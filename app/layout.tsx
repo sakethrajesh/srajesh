@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: 'Saketh Rajesh',
     template: '%s | Saketh Rajesh',
   },
-  description: 'Developer, writer, and creator.',
+  description: 'Developer, hooper, and creator.',
   openGraph: {
     title: 'Saketh Rajesh',
     description: 'Developer, hooper, and creator.',
