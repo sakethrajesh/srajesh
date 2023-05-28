@@ -7,23 +7,24 @@ import Link from 'next/link';
 // };
 
 const projects = {
-  'The Narator': {
-    body: 'The Narator is a web applicaiotn that enables users to dictate their stories and transform them into picture books using Open-AI’s Dalle Model',
-    link: 'https://devpost.com/software/the-narator',
-  }, 
+  'The Narrator': {
+    body: 'The Narrator is a web application that enables users to dictate their stories and transform them into picture books using OpenAI’s DALL·E Model',
+    link: 'https://devpost.com/software/the-narrator',
+  },
   'Powered Down': {
-    body: 'Powered Down allows user to select a location for the plug and the plug will turn off when user leaves that location and turns on when the user arrives at the location.',
+    body: 'Powered Down allows users to select a location for the plug, and the plug will turn off when the user leaves that location and turn on when the user arrives at the location.',
     link: 'https://devpost.com/software/project-6ufisdb5k719',
-  }, 
-  'Discord Applicaion Tracker': {  
-    body: 'This Discord Bot allows users to track which commpines and roles they have applied to an dtrack teh status of thier applications.',
+  },
+  'Discord Application Tracker': {
+    body: 'This Discord Bot allows users to track which companies and roles they have applied to and track the status of their applications.',
     link: 'https://devpost.com/software/application_stack',
-  }, 
+  },
   'Grocery Lens': {
-    body: 'Track your groceries using a simple app that identifies fruits and vegtables.',
-    link: ''
-  }
+    body: 'Track your groceries using a simple app that identifies fruits and vegetables.',
+    link: '',
+  },
 };
+
 
 export default async function ProjectsPage() {
   return (

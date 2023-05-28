@@ -5,7 +5,7 @@ export const avatar = me;
 export const about = () => {
   return (
     <>
-      I'm a software engineer who loves to explore new technologies. I am currenlty a Machine Learning Engineering Intern at Octo (IBM).
+      I'm a software engineer who loves to explore new technologies. I am currenlty a Software Engineering Intern at Octo (IBM).
     </>
   );
 };
