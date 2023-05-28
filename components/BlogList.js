@@ -9,6 +9,7 @@ import { posts } from 'lib/notion';
 function BlogList({list}) {
     const [session, setSession] = useState(null)
     const [blogs, setBlogs] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         setSession(supabase.auth.getSession())
@@ -25,12 +26,22 @@ function BlogList({list}) {
             setBlogs(data.results)
         }
         getPosts()
+        setLoading(false)
         
     }, [])
 
+    if (loading) {
+        return (
+            <>
+                <h1 className="font-bold text-3xl font-serif mb-5">Blogs</h1>
+                <div>Loading...</div>
+            </>
+            );
+      }
+
   return (
     <>
-        <h1 className="font-bold text-3xl font-serif mb-5">Blog</h1>
+        <h1 className="font-bold text-3xl font-serif mb-5">Blogs</h1>
         {blogs
             .map((post) => (
             <Link

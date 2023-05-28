@@ -17,6 +17,9 @@ const navItems = {
   },
   '/gallery': {
     name: 'gallery'
+  },
+  '/blog': {
+    name: 'blog'
   }
   // '/guestbook': {
   //   name: 'guestbook',
