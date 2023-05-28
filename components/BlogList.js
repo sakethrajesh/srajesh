@@ -38,10 +38,6 @@ function BlogList({list}) {
                 className="flex flex-col space-y-1 mb-4"
                 href={{
                     pathname: `/blog/${post.id}`,
-                    query: {
-                        date: post.properties.Date.date.stare,
-                        title: post.properties.Name.title[0].plain_text
-                    }
                 }}
             >
                 <div className="w-full flex flex-col">

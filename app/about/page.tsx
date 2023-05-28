@@ -1,9 +1,10 @@
 'use client'
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 export default function AboutPage() {
-  const r = useRouter()
+  // const r = useRouter()
+  const pathname = usePathname();
 
   return (
     <section>
@@ -18,7 +19,7 @@ I have also completed several exciting projects, including The Narrator, a platf
 I am an active member of various clubs and organizations, such as the Hokie Electric Vehicle Team, where I am Integrating ACC, lane centering, and automatic intersection navigation into 2023 Cadillac LYRIQ for EcoCAR EV Challenge. I am also a Software Engineering Mentor at the Archimedes Society, where I advise freshman software design teams and teach software development fundamentals in building cloud applications.
 
       </p>
-      <p>{r.asPath}</p>
+      <p>{pathname}</p>
     </section>
   );
 }

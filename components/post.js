@@ -1,10 +1,11 @@
 'use client'
+
 import React, { useEffect, useState } from 'react';
 import { blocks, page } from '../lib/notion';
 import Balancer from 'react-wrap-balancer';
 import { supabase } from 'lib/supabaseClient';
 
-function Post() {
+function Post({id}) {
   const [post, setPost] = useState('');
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
@@ -30,6 +31,7 @@ function Post() {
         console.log(data.results[0].paragraph)
         setPost(data.results[0].paragraph.rich_text[0].plain_text)
     }
+    console.log(id)
     getPosts().then(() => setLoading(false))
     // 
     
