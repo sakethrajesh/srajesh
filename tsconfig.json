@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-, "app/projects/page.js"  ],
+, "app/projects/page.js", "app/blog/[slug]/page.js", "lib/notion.js"  ],
   "exclude": ["node_modules"]
 }
