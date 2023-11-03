@@ -1,64 +1,32 @@
-'use client';
+"use server";
 
-import Link from 'next/link';
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import { supabase } from '../lib/supabaseClient'
-import { posts } from 'lib/notion';
+import { GetPosts } from "lib/notion";
+import Link from "next/link";
 
-function BlogList({list}) {
-    const [session, setSession] = useState(null)
-    const [blogs, setBlogs] = useState([])
-    const [loading, setLoading] = useState(true)
+async function BlogList() {
+  const blogs = await GetPosts();
 
-    useEffect(() => {
-        setSession(supabase.auth.getSession())
-        supabase.auth.onAuthStateChange((_event, session) => setSession(session))
-        
-        const getPosts = async () => {
-            // let { data, error } = await supabase
-            // .from('blog_posts')
-            // .select('*')
-            // console.log(JSON.stringify(data, null, 2))
-
-            const data = await posts()
-            console.log(data.results)
-            setBlogs(data.results)
-        }
-        getPosts()
-        setLoading(false)
-        
-    }, [])
-
-    if (loading) {
-        return (
-            <>
-                <h1 className="font-bold text-3xl font-serif mb-5">Blogs</h1>
-                <div>Loading...</div>
-            </>
-            );
-      }
+  console.log(blogs.results);
 
   return (
     <>
-        <h1 className="font-bold text-3xl font-serif mb-5">Blogs</h1>
-        {blogs
-            .map((post) => (
-            <Link
-                key={post.id}
-                className="flex flex-col space-y-1 mb-4"
-                href={{
-                    pathname: `/blog/${post.id}`,
-                }}
-            >
-                <div className="w-full flex flex-col">
-                <p>{post.properties.Name.title[0].plain_text}</p>
-                <p>{post.properties.Date.date.start}</p>
-                </div>
-            </Link>
-            ))}
+      <h1 className="mb-5 font-serif text-3xl font-bold">Blogs</h1>
+      {blogs.results.map((post) => (
+        <Link
+          key={post.id}
+          className="mb-4 flex flex-col space-y-1"
+          href={{
+            pathname: `/blog/${post.id}`,
+          }}
+        >
+          <div className="flex w-full flex-col">
+            <p>{post.properties.Name.title[0].plain_text}</p>
+            <p>{post.properties.Date.date.start}</p>
+          </div>
+        </Link>
+      ))}
     </>
-  )
+  );
 }
 
-export default BlogList
+export default BlogList;
