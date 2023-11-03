@@ -1,18 +1,21 @@
-import me from '../app/face.png';
+import me from "../app/face.png";
 
-export const name = 'Saketh Rajesh';
+export const name = "Saketh Rajesh";
 export const avatar = me;
 export const about = () => {
   return (
     <>
-      I'm a software engineer who loves to explore new technologies. I am currently a Software Engineering Intern at Octo (IBM).
+      I'm a software engineer who loves to explore new technologies. I am
+      currently a Software Engineering Intern at Peraton and this past summer
+      was a Software Engineering Intern at IBM/Octo.
     </>
   );
 };
 export const bio = () => {
   return (
     <>
-      When I'm not coding, I'm probably hooping or out on a hike. I also love photography and exploring new places.
+      When I'm not coding, I'm probably hooping or out on a hike. I also love
+      photography and exploring new places.
     </>
   );
 };
