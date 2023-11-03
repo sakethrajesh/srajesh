@@ -1,5 +1,5 @@
-import { ArrowIcon } from 'components/icons';
-import Link from 'next/link';
+import { ArrowIcon } from "components/icons";
+import Link from "next/link";
 
 // export const Metadata = {
 //   title: 'Projects',
@@ -7,51 +7,49 @@ import Link from 'next/link';
 // };
 
 const projects = {
-  'The Narrator': {
-    body: 'The Narrator is a web application that enables users to dictate their stories and transform them into picture books using OpenAI’s DALL·E Model',
-    link: 'https://devpost.com/software/the-narrator',
+  "Food Snap": {
+    body: "Instant recipes-- from just a picture-- to help stop food wastage!",
+    link: "https://devpost.com/software/food-snap-q6apl5",
   },
-  'Powered Down': {
-    body: 'Powered Down allows users to select a location for the plug, and the plug will turn off when the user leaves that location and turn on when the user arrives at the location.',
-    link: 'https://devpost.com/software/project-6ufisdb5k719',
+  "The Narrator": {
+    body: "The Narrator is a web application that enables users to dictate their stories and transform them into picture books using OpenAI’s DALL·E Model",
+    link: "https://devpost.com/software/the-narrator",
   },
-  'Discord Application Tracker': {
-    body: 'This Discord Bot allows users to track which companies and roles they have applied to and track the status of their applications.',
-    link: 'https://devpost.com/software/application_stack',
+  "Powered Down": {
+    body: "Powered Down allows users to select a location for the plug, and the plug will turn off when the user leaves that location and turn on when the user arrives at the location.",
+    link: "https://devpost.com/software/project-6ufisdb5k719",
   },
-  'Grocery Lens': {
-    body: 'Track your groceries using a simple app that identifies fruits and vegetables.',
-    link: '',
+  "Discord Application Tracker": {
+    body: "This Discord Bot allows users to track which companies and roles they have applied to and track the status of their applications.",
+    link: "https://devpost.com/software/application_stack",
   },
 };
-
 
 export default async function ProjectsPage() {
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif mb-5">Projects</h1>
-          <ul role="list" className="divide-y divide-gray-100">
-              {Object.entries(projects).map(([name, { body, link }]) => {
-                return (
-                  <Link
-                    key={name}
-                    className="flex flex-col space-y-1 mb-4  hover:text-neutral-800 hover:font-bold"
-                    href={link}
-                   target="_blank"
-  
-                  >
-                    <div className="w-full flex flex-col">
-                      <h2 className='font-bold text-2xl font-serif'>{name}</h2>
-                      <p className='text-sm text-neuteal-200'>{body}</p>
-                      <p className="font-mono text-sm text-neutral-500 tracking-tighter">
-                        {link}
-                      </p>
-                      <ArrowIcon/>
-                    </div>
-                  </Link>
-                );
-              })}
-          </ul>
+      <h1 className="mb-5 font-serif text-3xl font-bold">Projects</h1>
+      <ul role="list" className="divide-y divide-gray-100">
+        {Object.entries(projects).map(([name, { body, link }]) => {
+          return (
+            <Link
+              key={name}
+              className="mb-4 flex flex-col space-y-1  hover:font-bold hover:text-neutral-800"
+              href={link}
+              target="_blank"
+            >
+              <div className="flex w-full flex-col">
+                <h2 className="font-serif text-2xl font-bold">{name}</h2>
+                <p className="text-neuteal-200 text-sm">{body}</p>
+                <p className="font-mono text-sm tracking-tighter text-neutral-500">
+                  {link}
+                </p>
+                <ArrowIcon />
+              </div>
+            </Link>
+          );
+        })}
+      </ul>
     </section>
   );
 }

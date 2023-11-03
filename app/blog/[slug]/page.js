@@ -1,54 +1,41 @@
-'use client'
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+"use server";
+import Balancer from "react-wrap-balancer";
+import { getBlocks, getPage } from "lib/notion";
 
-import Balancer from 'react-wrap-balancer';
-import { supabase } from 'lib/supabaseClient';
-import { blocks, page } from 'lib/notion';
-
-export default function Blog() {
-  const [id, setId] = useState('')
-  const pathname = usePathname();
-
-  const [post, setPost] = useState('');
-  const [title, setTitle] = useState('')
-  const [date, setDate] = useState('')
-  const [loading, setLoading] = useState(true);
-  const [session, setSession] = useState(null)
-
-  
-  useEffect(() => {
-    setSession(supabase.auth.getSession())
-    supabase.auth.onAuthStateChange((_event, session) => setSession(session))
-    
-    const getPosts = async (id) => {
-        const data = await blocks(pathname.substring(6))
-        const p = await page(pathname.substring(6))
-        setTitle(p.properties.Name.title[0].plain_text)
-        setDate(p.properties.Date.date.start)
-        console.log(data.results[0].paragraph)
-        setPost(data.results[0].paragraph.rich_text[0].plain_text)
-    }
-    getPosts().then(() => setLoading(false))
-
-  }, [])
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+export default async function Blog({ params }) {
+  const blocks = await getBlocks(params.slug);
+  const page = await getPage(params.slug);
+  const title = page.properties.Name.title[0].plain_text;
+  const date = page.properties.Date.date.start;
 
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif max-w-[650px]">
+      <h1 className="max-w-[650px] font-serif text-3xl font-bold">
         <Balancer>{title}</Balancer>
       </h1>
-      <div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px]">
-        <div className="bg-neutral-100 dark:bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">
+      <div className="mb-8 mt-4 grid max-w-[650px] grid-cols-[auto_1fr_auto] items-center font-mono text-sm">
+        <div className="rounded-md bg-neutral-100 px-2 py-1 tracking-tighter dark:bg-neutral-800">
           {date}
         </div>
-        <div className="h-[0.2em] bg-neutral-50 dark:bg-neutral-800 mx-2" />
+        <div className="mx-2 h-[0.2em] bg-neutral-50 dark:bg-neutral-800" />
       </div>
-      <p>{post}</p>
-  </section>
+      {blocks.results.map((block) => {
+        if (block.type === "heading_1" && block.heading_1.rich_text[0]) {
+          return (
+            <h1 className="my-5 text-2xl text-neutral-800 dark:text-neutral-200">
+              {block.heading_1.rich_text[0].plain_text}
+            </h1>
+          );
+        }
+        if (block.type === "paragraph" && block.paragraph.rich_text[0]) {
+          return (
+            <p className="my-5 text-neutral-800 dark:text-neutral-200">
+              {block.paragraph.rich_text[0].plain_text}
+            </p>
+          );
+        }
+        // Render other block types
+      })}
+    </section>
   );
 }

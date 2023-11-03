@@ -1,6 +1,5 @@
-'use client'
-import { usePathname, useRouter } from 'next/navigation';
-
+"use client";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function AboutPage() {
   // const r = useRouter()
@@ -8,16 +7,57 @@ export default function AboutPage() {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl font-serif">About Me</h1>
+      <h1 className="font-serif text-3xl font-bold">About Me</h1>
       <p className="my-5 text-neutral-800 dark:text-neutral-200">
-        I am currently pursuing my Bachelor of Science in Computer Science at Virginia Tech, with an expected graduation date of May 2025. I have previous experience as a FullStack Software Engineer Intern at SmartTwigs/Sesto Labs, where I developed a modular, reusable React component-based front end for a social media/awareness web and mobile app. I also implemented Stripe API for payment/donation services and payment error handling, designed and built a commenting service used by over 1000 daily users, and leveraged Sentry Analytics to identify performance issues and crashes.
+        I'm Saketh Rajesh, a driven computer science student graduating from
+        Virginia Tech in May 2025. I'm passionate about software engineering and
+        building innovative applications. Outside of coding, I'm a huge
+        basketball fan and die-hard Bay Area sports fanatic. I also love
+        photography - check out my <a href="gallery.html">gallery</a> for some
+        of my favorite shots!
+      </p>
 
-<br/><br/>In my most recent position as a Research Fellow at Raytheon Technologies, I gained hands-on ITAR-level traineeship in tools and techniques for applied machine learning and cybersecurity. In my upcoming role as an Incoming Machine Learning Engineering Intern at Octo (IBM), I will be working on machine learning and cybersecurity research.
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        I'm currently pursuing my B.S. in Computer Science at Virginia Tech with
+        an overall GPA of 3.71/4.00. Through my coursework and hands-on
+        experience, I've become proficient in languages like Python, Java,
+        JavaScript, C/C++, and Go. I have experience building full stack
+        applications using frameworks like Spring Boot, React, Node.js, and
+        Django.
+      </p>
 
-I have also completed several exciting projects, including The Narrator, a platform that empowers and preserves oral traditions and stories passed down from generation to generation, using Next.js, OpenAI-Dalle Model, MongoDB, and Vercel. I also created Powered Down, a web app that automatically turns lights on/off based on location and time of day, using React, SocketIO, Flask, and Firebase, which won Best Web Hack Using Flask and Best use of Google Cloud at HackViolet.
-<br /><br/>
-I am an active member of various clubs and organizations, such as the Hokie Electric Vehicle Team, where I am Integrating ACC, lane centering, and automatic intersection navigation into 2023 Cadillac LYRIQ for EcoCAR EV Challenge. I am also a Software Engineering Mentor at the Archimedes Society, where I advise freshman software design teams and teach software development fundamentals in building cloud applications.
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        On the backend, I have worked with databases like MySQL, MongoDB, and
+        PostgreSQL. I leverage cloud platforms like AWS, Azure, and GCP to
+        deploy scalable applications. I'm also familiar with developer tools
+        like Linux, Git, Docker, Kubernetes, and CI/CD pipelines.
+      </p>
 
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        I have professional experience through internships at companies like
+        Peraton, IBM/Octo, and SmartTwigs. My roles have included building APIs,
+        integrating payment systems, containerizing applications, and optimizing
+        workloads. I've also conducted network analysis and machine learning
+        research.
+      </p>
+
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        Outside of work, I serve as a software engineering mentor for teams
+        competing in hackathons and challenges like the Microsoft Imagine Cup. I
+        enjoy teaching others and helping them build their technical skills.
+      </p>
+
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        In my free time, you can find me playing pickup basketball at the gym or
+        rooting for the Warriors and 49ers. I also love landscape and urban
+        photography. I'm always looking for new places to explore and capture
+        through my lens.
+      </p>
+
+      <p className="my-5 text-neutral-800 dark:text-neutral-200">
+        I'm excited to continue growing as a software engineer. I'm a driven,
+        quick learner looking to join a collaborative team where I can
+        contribute meaningfully.
       </p>
     </section>
   );
